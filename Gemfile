@@ -47,6 +47,9 @@ gem "bootsnap", require: false
 # 日本語用のymlファイルを追加する
 gem 'rails-i18n'
 
+# Schemefileを使用するためのgem
+gem 'ridgepole'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
@@ -63,5 +66,8 @@ group :development do
   # gem "spring"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+
+  gem "html2slim"
+  gem "slim-rails"
 end
 

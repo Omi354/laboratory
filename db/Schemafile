@@ -1,0 +1,29 @@
+# encoding: utf-8
+
+create_table "cats", id: { type: :bigint, unsigned: true }, comment: "猫", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
+  t.string "name", default: ""
+  t.integer "age"
+  t.datetime "updated_at", null: false
+  t.datetime "created_at", null: false
+end
+
+create_table "dogs", comment: "犬", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
+  t.string :name
+  t.integer :age
+
+  t.timestamps
+end
+
+create_table "chicks", comment: "ひよこ", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
+  t.string :name
+  t.integer :age
+
+  t.timestamps
+end
+
+create_table "owls", comment: "ふくろう", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
+  t.string :name
+  t.integer :age
+
+  t.timestamps
+end

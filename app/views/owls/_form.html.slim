@@ -1,0 +1,19 @@
+= form_with(model: owl, class: "contents") do |form|
+  - if owl.errors.any?
+    #error_explanation.bg-red-50.text-red-500.px-3.py-2.font-medium.rounded-md.mt-3
+
+    h2
+      = pluralize(owl.errors.count, "error")
+      |  prohibited this owl from being saved:
+    ul.list-disc.ml-6
+      - owl.errors.each do |error|
+        li
+          = error.full_message
+  .my-5
+    = form.label :name
+    = form.text_field :name, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": owl.errors[:name].none?, "border-red-400 focus:outline-red-600": owl.errors[:name].any?}]
+  .my-5
+    = form.label :age
+    = form.number_field :age, class: ["block shadow-sm rounded-md border px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": owl.errors[:age].none?, "border-red-400 focus:outline-red-600": owl.errors[:age].any?}]
+  .inline
+    = form.submit class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer"

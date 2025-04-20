@@ -92,11 +92,15 @@ GEM
     debug (1.10.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    diffy (3.4.3)
     drb (2.2.1)
     error_highlight (0.7.0)
     erubi (1.13.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    hpricot (0.8.6)
+    html2slim (0.2.0)
+      hpricot
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -191,7 +195,18 @@ GEM
       psych (>= 4.0.0)
     reline (0.6.1)
       io-console (~> 0.5)
+    ridgepole (3.0.1)
+      activerecord (>= 6.1, < 8.1)
+      diffy
+      logger
     securerandom (0.4.1)
+    slim (5.2.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    slim-rails (3.7.0)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
+      slim (>= 3.0, < 6.0, != 5.0.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -207,7 +222,9 @@ GEM
       tailwindcss-ruby (~> 4.0)
     tailwindcss-ruby (4.1.3-aarch64-linux-gnu)
     tailwindcss-ruby (4.1.3-x86_64-linux-gnu)
+    temple (0.10.3)
     thor (1.3.2)
+    tilt (2.6.0)
     timeout (0.4.3)
     turbo-rails (2.0.13)
       actionpack (>= 7.1.0)
@@ -233,11 +250,14 @@ DEPENDENCIES
   bootsnap
   debug
   error_highlight (>= 0.4.0)
+  html2slim
   importmap-rails
   mysql2 (~> 0.5)
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   rails-i18n
+  ridgepole
+  slim-rails
   sprockets-rails
   stimulus-rails
   tailwindcss-rails
