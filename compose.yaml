@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev # Dockerfile.dev を使用している場合
-    command: bash -c "rm -f tmp/pids/server.pid && bin/rails server -b '0.0.0.0'" # server.pid削除を追加
+    command: bash -c "rm -f tmp/pids/server.pid && bundle install && bin/dev" # server.pid削除を追加
     volumes:
       - .:/app
     ports:

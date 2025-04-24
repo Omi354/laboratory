@@ -1,0 +1,6 @@
+adapter: mysql2
+encoding: utf8mb4
+database: laboratory_development
+username: root
+password: password
+host: db
